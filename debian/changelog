@@ -1,0 +1,108 @@
+osgi-core (7.0.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Updated the pom to the version 7.0.0
+  * Relocate the old artifact org.osgi:org.osgi.core to org.osgi:osgi.core
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 03 Aug 2020 22:06:45 +0200
+
+osgi-core (7.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Updated the Maven pom
+  * Removed Damien Raude-Morvan from the uploaders (Closes: #889334)
+  * Updated debian/watch to track org.osgi:osgi.core on Maven Central
+  * Standards-Version updated to 4.5.0
+  * Switch to debhelper level 13
+  * Use salsa.debian.org Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 03 Aug 2020 00:29:05 +0200
+
+osgi-core (6.0.0-1) unstable; urgency=medium
+
+  [ Markus Koschany ]
+  * Team upload.
+  * Imported Upstream version 6.0.0.
+  * Improve package description by being more concise. Fix spelling.
+  * Update copyright years.
+  * Drop maven.rules because it was not used.
+  * debian/pom.xml: Update for new release 6.0.0.
+  * Add libosgi-annotation-java to Build-Depends.
+  * Add osgi.annotation to CLASSPATH.
+
+  [ Miguel Landaeta ]
+  * Upload to unstable.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Fri, 01 May 2015 13:11:56 -0300
+
+osgi-core (5.0.0-1) experimental; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 5.0.0.
+  * Update debian/watch. Drop orig-tar.sh and use the sources from Maven.
+    This is more convenient then trying to find the hidden sources on osgi.org.
+  * Update get-orig-source target and repack the tarball to tar.xz format.
+  * Update debian/copyright for new release.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Use shorter Vcs-Browser URL.
+  * Update debian/pom.xml for 5.0.0.
+  * javabuild: Use org directory instead of src.
+  * wrap-and-sort -sa.
+
+ -- Markus Koschany <apo@gambaru.de>  Sat, 07 Feb 2015 22:31:15 +0100
+
+osgi-core (4.3.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 4.3.1.
+  * Update orig-tar.sh. Fix download URL.
+  * Declare compliance with Debian policy 3.9.5.
+  * Update pom.xml for new upstream release.
+
+ -- Markus Koschany <apo@gambaru.de>  Sun, 16 Mar 2014 20:24:04 +0100
+
+osgi-core (4.3.0-4) unstable; urgency=low
+
+  * Team upload.
+  * Fix FTBFS because of wrong line breaks and whitespaces in pom.xml, so that
+    mh_installpoms can function properly. (Closes: #713273)
+  * Do not override jh_manifest in debian/rules because this prevents the
+    creation of a symlink to the real jar. The manifest file in src is not
+    required. (Closes: #678801)
+  * Bump compat level to 9 and require debhelper >= 9.
+  * Bump Standards-Version to 3.9.4, no changes.
+  * Use canonical Vcs-URI.
+
+ -- Markus Koschany <apo@gambaru.de>  Wed, 07 Aug 2013 00:35:21 +0200
+
+osgi-core (4.3.0-3) unstable; urgency=low
+
+  * Team upload.
+  * Rebuild with javahelper/0.43 to ensure backwards
+    compatible byte code is generated.  (Closes: #678758)
+
+ -- Niels Thykier <niels@thykier.net>  Sun, 24 Jun 2012 13:51:46 +0200
+
+osgi-core (4.3.0-2) unstable; urgency=low
+
+  * Team upload.
+  * Pass encoding flags to javac and javadoc to fix FTBFS
+    with openjdk-7.  (LP: #888992)
+  * Add missing versioned dependency on maven-repo-helper.
+  * Remove duplicated field in d/copyright.
+
+ -- Niels Thykier <niels@thykier.net>  Mon, 18 Jun 2012 17:42:35 +0200
+
+osgi-core (4.3.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * d/watch: Use new bndtools project on github.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Wed, 09 Nov 2011 20:42:18 +0100
+
+osgi-core (4.2.0-1) unstable; urgency=low
+
+  * Initial release. (Closes: #643981).
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sun, 02 Oct 2011 19:39:23 +0200

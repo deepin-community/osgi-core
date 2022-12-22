@@ -1,0 +1,2 @@
+debian/pom.xml --no-parent --usj-name=osgi.core --relocate=org.osgi:org.osgi.core
+

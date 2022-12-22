@@ -1,0 +1,43 @@
+Source: osgi-core
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Ludovic Claude <ludovic.claude@laposte.net>
+Build-Depends:
+ ant,
+ debhelper-compat (= 13),
+ default-jdk,
+ javahelper (>= 0.43~),
+ libosgi-annotation-java,
+ maven-repo-helper (>= 1.6~)
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/java-team/osgi-core.git
+Vcs-Browser: https://salsa.debian.org/java-team/osgi-core
+Homepage: http://www.osgi.org/Specifications/HomePage
+
+Package: libosgi-core-java
+Architecture: all
+Depends:
+ ${java:Depends},
+ ${misc:Depends}
+Suggests:
+ libosgi-core-java-doc
+Description: Java OSGi API - Core module
+ OSGi, for Open Services Gateway initiative framework, is a module system and
+ service platform for the Java programming language.
+ .
+ This package contains the OSGi Core module.
+
+Package: libosgi-core-java-doc
+Architecture: all
+Section: doc
+Depends:
+ ${misc:Depends}
+Recommends:
+ ${java:Recommends}
+Description: Javadoc for Java OSGi API - Core module
+ OSGi, for Open Services Gateway initiative framework, is a module system and
+ service platform for the Java programming language.
+ .
+ This package contains Javadoc HTML documentation for libosgi-core-java.

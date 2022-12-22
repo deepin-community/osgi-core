@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+export JAVA_HOME := /usr/lib/jvm/default-java
+export CLASSPATH := /usr/share/java/osgi.annotation.jar
+
+MAVEN_REPO := https://repo1.maven.org/maven2/org/osgi/osgi.core
+VERSION := $(shell dpkg-parsechangelog | sed -n 's/^Version: //p' | sed -e 's/-[^-]*$$//')
+JAR_NAME := osgi.core
+PACKAGE := libosgi-core-java
+
+%:
+	dh $@ --with javahelper --with jh_maven_repo_helper
+
+override_jh_build:
+	jh_build --javacopts='-encoding UTF-8' --javadoc-opts='-encoding UTF-8'
+
+get-orig-pom:
+	wget --user-agent="" -O debian/pom.xml $(MAVEN_REPO)/$(VERSION)/osgi.core-$(VERSION).pom
